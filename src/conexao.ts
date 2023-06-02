@@ -1,4 +1,4 @@
-const { Pool } = require('pg');
+import { Pool, QueryResult } from 'pg';
 
 const pool = new Pool({
     host: 'localhost',
@@ -6,14 +6,10 @@ const pool = new Pool({
     user: 'postgres',
     password: 'postgres',
     database: 'biblioteca_pessoal',
-})
+});
 
-const poolQuery = (texto, parametro) => {
+const poolQuery = (texto: string, parametro?: any[]): Promise<QueryResult> => {
     return pool.query(texto, parametro);
-}
+};
 
-
-module.exports = {
-    poolQuery,
-    pool
-}
+export { poolQuery };
