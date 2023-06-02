@@ -4,7 +4,7 @@
   "description": "Projeto para controle da quantidade de livros lidos ou guardados.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec ts-node index.ts"
+    "start": "nodemon --exec ts-node server.ts"
   },
   "keywords": [],
   "author": "",
