@@ -1,5 +1,5 @@
 import express from 'express';
-import rotas from './src/rotas';
+import rotas from './src/Routers/rotas';
 
 const app = express();
 

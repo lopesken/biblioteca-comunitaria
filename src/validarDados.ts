@@ -1,6 +1,8 @@
 import { Request, Response, NextFunction } from 'express';
+// import jwt from 'jsonwebtoken'
+// import { poolQuery } from './conexao';
 
-const validarDados = async (req: Request, res: Response, next: NextFunction): Promise<void | Response<any, Record<string, any>>> => {
+const validarDados = async (req: Request, res: Response, next: NextFunction) => {
     const { titulo, autor, paginas, genero, tipo } = req.body;
 
     if (!titulo) {
@@ -18,4 +20,6 @@ const validarDados = async (req: Request, res: Response, next: NextFunction): Pr
     next();
 };
 
-export default validarDados;
+
+export default validarDados
+

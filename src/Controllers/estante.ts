@@ -1,11 +1,8 @@
 import { Request, Response } from 'express';
-import { poolQuery } from './conexao';
-
-const boasvindas = (req: Request, res: Response): Response => {
-    return res.send('Welcome to your library!');
-};
+import { poolQuery } from '../conexao';
 
 const listarTodos = async (req: Request, res: Response): Promise<Response> => {
+
     try {
         const select = 'select * from livros';
         const resultado = await poolQuery(select);
@@ -68,7 +65,6 @@ const deletarLivro = async (req: Request, res: Response): Promise<Response> => {
 };
 
 export {
-    boasvindas,
     listarTodos,
     filtro,
     cadastrarLivro,
