@@ -1,9 +1,11 @@
-Projeto para controle da quantidade de livros lidos ou guardados.
+Projeto para controle de Biblioteca.
 
-Trata-se de um projeto de conexão do node.js com o postgreSQL.
+Trata-se de um projeto escrito em Typescript e conexão com o postgreSQL.
 
-Para teste e utilização da aplicação, há necessidade de alterar de forma manual a variavel pool no arquivo conexao.js, se caso o seu postgres não estiver configurado como padrão.
+Há no projeto as seguintes funcionadidades:
+- Cadastro de bibliotecarios / usuarios;
+- Cadastro e Exclusão de livros do sistema mediante validação de token de login;
+- Cadastro de clientes;
+- Cadastro de emprestimo e devolução de livros.
 
-Será aplicado, posteriormente, a automatização da conexão com o arquivo .env / dotenv.
 
-Segue alguns prints de teste da aplicação realizada no Insomnia:
