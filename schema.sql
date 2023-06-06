@@ -1,17 +1,42 @@
 create database Biblioteca_Pessoal;
 
-create table livros (
-  titulo text, 
-  autor text, 
-  paginas integer, 
-	genero text,
-  tipo text
-  );
-
 create table usuarios (
   id serial primary key,
   nome text,
-  idade text,
-  email text not null,
-  senha text not null
+  email text,
+  senha text
   );
+  create table clientes (
+    id serial primary key,
+    nome text,
+    email text);
+create table livros (
+  id serial primary key,
+  titulo text, 
+  autor text, 
+	genero text
+  );
+  create table emprestimos (
+    titulo text,
+    autor text,
+    email text
+  );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

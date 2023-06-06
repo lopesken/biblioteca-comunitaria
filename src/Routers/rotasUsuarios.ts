@@ -1,12 +1,14 @@
 import { Router } from 'express';
 import { listarTodos, cadastrarLivro, filtro, deletarLivro } from '../Controllers/estante';
-import validarDados from '../validarDados';
+import { email, validarDados } from '../Middlewares/validarDados';
 import { cadastrarUsuario, login } from '../Controllers/usuario';
+import validarToken from '../Middlewares/token';
 
 const rotas = Router();
 
-rotas.post('/usuario', cadastrarUsuario)
-rotas.get('/usuario', login)
+rotas.post('/usuario', email, cadastrarUsuario);
+rotas.get('/usuario', login);
+rotas.use(validarToken)
 rotas.get('/listar', listarTodos);
 rotas.get('/listafiltrada', filtro);
 rotas.post('/cadastrar', validarDados, cadastrarLivro);
