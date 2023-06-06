@@ -42,6 +42,22 @@ const cadastrarLeitor = async (req: Request, res: Response) => {
 //         return res.status(500).json({ mensagem: error.message });
 //     }
 // }
+const excluirLeitor = async (req: Request, res: Response) => {
+    const { nome, email } = req.query
+
+    try {
+        // const criptografia = await bcrypt.hash(senha, 10)
+        const deletar = `delete from clientes where email=$1`
+        const resultado = await poolQuery(deletar, [email])
+
+        if (resultado.rowCount === 0) {
+            return res.json('Cliente não encontrado');
+        }
+        return res.status(202).json({ Mensagem: "Cliente deletado com sucesso" })
+    } catch (error: any) {
+        return res.status(500).json({ mensagem: error.message });
+    }
+}
 const retirada = async (req: Request, res: Response) => {
     const { titulo, autor, email } = req.query;
 
@@ -80,7 +96,8 @@ const devolucao = async (req: Request, res: Response) => {
 }
 export {
     cadastrarLeitor,
-    //  loginLeitor, 
+    //  loginLeitor,
+    excluirLeitor,
     retirada,
     devolucao
 }
