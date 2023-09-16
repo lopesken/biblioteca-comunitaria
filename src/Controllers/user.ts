@@ -1,7 +1,7 @@
 import bcrypt from 'bcrypt';
 import { Request, Response } from 'express';
 import jwt from 'jsonwebtoken'
-import { poolQuery } from '../Connections/conexao';
+import { poolQuery } from '../Connections/poolquery';
 
 
 const cadastrarUsuario = async (req: Request, res: Response) => {

@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
-import { poolQuery } from '../Connections/conexao';
+import { poolQuery } from '../Connections/poolquery';
 
 const validarToken = async (req: Request, res: Response, next: NextFunction) => {
     const { authorization } = req.headers;

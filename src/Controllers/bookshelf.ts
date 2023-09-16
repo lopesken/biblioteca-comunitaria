@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { poolQuery } from '../Connections/conexao';
+import { poolQuery } from '../Connections/poolquery';
 
 const listarTodos = async (req: Request, res: Response): Promise<Response> => {
 
