@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { listarTodos, cadastrarLivro, filtro, deletarLivro } from '../Controllers/estante';
-import { email, validarDados } from '../Middlewares/validarDados';
-import { cadastrarUsuario, login } from '../Controllers/usuario';
+import { listarTodos, cadastrarLivro, filtro, deletarLivro } from '../Controllers/bookshelf';
+import { email, validarDados } from '../Middlewares/validator';
+import { cadastrarUsuario, login } from '../Controllers/user';
 import validarToken from '../Middlewares/token';
 
 const rotas = Router();

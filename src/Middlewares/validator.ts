@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { poolQuery } from '../Connections/conexao';
+import { poolQuery } from '../Connections/poolquery';
 
 const validarDados = async (req: Request, res: Response, next: NextFunction) => {
     const { titulo, autor } = req.body;

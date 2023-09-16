@@ -1,7 +1,7 @@
 import bcrypt from 'bcrypt';
 import { Request, Response } from 'express';
 import jwt from 'jsonwebtoken'
-import { poolQuery } from '../Connections/conexao';
+import { poolQuery } from '../Connections/poolquery';
 
 const cadastrarLeitor = async (req: Request, res: Response) => {
     const { nome, email } = req.body
@@ -58,6 +58,19 @@ const excluirLeitor = async (req: Request, res: Response) => {
         return res.status(500).json({ mensagem: error.message });
     }
 }
+const listarClientes = async (req: Request, res: Response): Promise<Response> => {
+
+    try {
+        const select = 'select * from clientes';
+        const resultado = await poolQuery(select);
+        if (resultado.rowCount == 0) {
+            return res.status(400).json({ mensagem: `Não há cliente cadastrado nessa biblioteca` })
+        }
+        return res.json(resultado.rows);
+    } catch (error: any) {
+        return res.status(500).json({ mensagem: error.message });
+    }
+};
 const retirada = async (req: Request, res: Response) => {
     const { titulo, autor, email } = req.query;
 
@@ -98,6 +111,7 @@ export {
     cadastrarLeitor,
     //  loginLeitor,
     excluirLeitor,
+    listarClientes,
     retirada,
     devolucao
 }

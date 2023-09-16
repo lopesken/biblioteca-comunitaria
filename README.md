@@ -1,9 +1,19 @@
-Projeto para controle da quantidade de livros lidos ou guardados.
+Projeto para Livraria Comunitária.
 
 Trata-se de um projeto de conexão do node.js com o postgreSQL.
 
-Para teste e utilização da aplicação, há necessidade de alterar de forma manual a variavel pool no arquivo conexao.js, se caso o seu postgres não estiver configurado como padrão.
+Foi definido as seguintes rotas na aplicação:
 
-Será aplicado, posteriormente, a automatização da conexão com o arquivo .env / dotenv.
+- Cadastramento de leitores.
+- Exclusão de leitor do banco de dados.
+- Registrar retirada de livro da biblioteca.
+- Resgistrar devolução do livro.
+- Listar todos os leitores cadastrados no bancod e dados.
 
-Segue alguns prints de teste da aplicação realizada no Insomnia:
+- Cadastrar bibliotecário.
+- Realização de login por parte do bibliotecário, para vizualização e alteração do sistema.
+- Apresentar os livros disponíveis, com possibilidade de filtrar por Autor ou nome do livro.
+- Cadastrar novos livros.
+- Excluir livros (por motivo de perca ou danos)
+
+Está em andamento a criação de opções para o leitor poder se registrar através do CPF, e verificar se o livro desejado encontra-se disponível para retirada.
