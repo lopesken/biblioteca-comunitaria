@@ -1,5 +1,5 @@
 Projeto para Livraria Comunitária.
-
+______________________________________________________________________________________________________________
 
 Trata-se de um projeto escrito em Typescript e conexão com o postgreSQL.
 
@@ -17,6 +17,6 @@ Foi definido as seguintes rotas na aplicação:
 - Apresentar os livros disponíveis, com possibilidade de filtrar por Autor ou nome do livro.
 - Cadastrar novos livros.
 - Excluir livros (por motivo de perca ou danos)
-
+______________________________________________________________________________________________________________
 Está em andamento a criação de opções para o leitor poder se registrar através do CPF, e verificar se o livro desejado encontra-se disponível para retirada.
 
