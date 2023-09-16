@@ -1,6 +1,8 @@
 Projeto para Livraria Comunitária.
 
-Trata-se de um projeto de conexão do node.js com o postgreSQL.
+
+Trata-se de um projeto escrito em Typescript e conexão com o postgreSQL.
+
 
 Foi definido as seguintes rotas na aplicação:
 
@@ -17,3 +19,4 @@ Foi definido as seguintes rotas na aplicação:
 - Excluir livros (por motivo de perca ou danos)
 
 Está em andamento a criação de opções para o leitor poder se registrar através do CPF, e verificar se o livro desejado encontra-se disponível para retirada.
+
